@@ -8412,6 +8412,8 @@ AFRAME.registerComponent('arjs-anchor', {
 
                     // create select camera UI
                     var selectCameraButton = document.createElement('button');
+					var selectList = document.createElement("select");
+					selectList.id = "mySelect";
                     selectCameraButton.innerText = 'Switch camera';
                     selectCameraButton.setAttribute('style', 'background-color: grey; color: white');
                     selectCameraButton.classList.add('arjs-select-camera');
@@ -8464,6 +8466,7 @@ AFRAME.registerComponent('arjs-anchor', {
                     });
 
                     containerElement.appendChild(selectCameraButton);
+					containerElement.appendChild(selectList);
                 }, 1000);
             }
         }, 1000 / 60)
