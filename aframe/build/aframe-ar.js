@@ -8412,8 +8412,6 @@ AFRAME.registerComponent('arjs-anchor', {
 
                     // create select camera UI
                     var selectCameraButton = document.createElement('button');
-					var playIos = document.createElement('button');
-					playIos.innerText = 'Play iOS';
 					var videoElement = document.querySelector('#arjs-video');
 					var videoSelect = document.createElement("select");
 					videoSelect.id = "mySelect";
@@ -8516,7 +8514,6 @@ AFRAME.registerComponent('arjs-anchor', {
 					//commented to show all camera devices
                    // containerElement.appendChild(selectCameraButton);
 					containerElement.appendChild(videoSelect);
-					containerElement.appendChild(playIos);
                 }, 1000);
             }
         }, 1000 / 60)
