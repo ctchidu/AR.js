@@ -8415,6 +8415,7 @@ AFRAME.registerComponent('arjs-anchor', {
 					var videoElement = document.querySelector('#arjs-video');
 					var videoSelect = document.createElement("select");
 					videoSelect.id = "mySelect";
+					videoSelect.onchange = getStream;
 					getStream().then(getDevices).then(gotDevices);
 					
 					function getDevices() {
@@ -8456,19 +8457,10 @@ AFRAME.registerComponent('arjs-anchor', {
 					  videoElement.srcObject = stream;
 					}
 
-function handleError(error) {
-  console.error('Error: ', error);
-}
+					function handleError(error) {
+					  console.error('Error: ', error);
+					}
 
-
-						
-						
-						
-						
-						
-						
-					
-					
                     selectCameraButton.innerText = 'Switch camera';
                     selectCameraButton.setAttribute('style', 'background-color: grey; color: white');
                     selectCameraButton.classList.add('arjs-select-camera');
