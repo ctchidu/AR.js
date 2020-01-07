@@ -8511,8 +8511,8 @@ AFRAME.registerComponent('arjs-anchor', {
                             });
                         });
                     });
-
-                    containerElement.appendChild(selectCameraButton);
+					//commented to show all camera devices
+                   // containerElement.appendChild(selectCameraButton);
 					containerElement.appendChild(videoSelect);
                 }, 1000);
             }
